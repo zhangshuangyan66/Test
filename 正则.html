@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" maxlength="6"/> <input type="number" maxlength="3" oninput="if()value"/>
+
+</body>
+</html>
+<script>
+    var reg = /^[A-Za-z0-9]+$/; //数字字母  == 座位号
+    var str = '5jvf84￥';
+    console.log(reg.test(str));
+
+    var reg1 = /^[\u4E00-\u9FA5A-Za-z0-9 || _]+$/;  //中文、英文、数字和下划线 == 前缀
+    var myreg = /^[a-zA-Z_\u4e00-\u9fa5]+$/;
+    var str1 = 'ngjf4758&';
+    console.log(reg1.test(str1));
+
+    var reg2 = /[^%&',;=?$\x22]\u4E00-\u9FA5A-Za-z0-9 || _/;  //自定义 ===汉字、特殊字符、字母或数字
+    var myreg = /^[A-Za-z0-9@!$%^&*()<>.?+-/#\u4e00-\u9fa5]+$/;
+    var str2 = '张_'
+    console.log(reg2.test(str2));
+</script>

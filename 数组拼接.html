@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="bundle.js"></script>
+    <script src="../angular/angular.min.js"></script>
+</head>
+<body>
+    <div ng-repeat="item in Array" ng-switch="item.childs">
+        <li ng-switch-when="1.1">ANGULAR1</li>
+        <li ng-switch-when="1.1">ANGULAR2</li>
+    </div>
+</body>
+</html>
+<script>
+    $scope.currentArray = [
+        {
+          childs:[
+              {name:'1.1'}
+          ],
+            code:'11',
+            name:'aaa'
+        },
+        {
+            childs:[{name:'2.1'}],
+            code:'22',
+            name:'bbb'
+        }
+    ]
+
+    //        var arr1 = [];
+//        var arr2 = [];
+//        var childs = [];
+//    $scope.currentArray.forEach(function(v,i){
+//        arr1.push(v);
+//        if(v.childs && v.childs.length > 0){
+//            v.childs.forEach(function(s){
+//                arr2.push(s)
+//            })
+//        }
+//
+//    })
+console.log(Number.parseFloat("aaaa"));
+</script>
